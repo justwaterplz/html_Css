@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Pacifico&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#container{
+    /* 전체 문서의 크기 1200 * 800 */
+    width: 1200px;
+    /* 위아래 마진0 좌우 auto -> 화면 가운데에 배치 */
+    margin: 0 auto;
+}
+header{
+    /* parent block of logo and nav */
+    width: 100%;
+    height:100px;
+    background-color:cyan;
+}
+#logo{
+    float:left;
+    width:250px;
+    height:100px;
+    /* background-color:magenta; */
+    
+}
+/* logo */
+#logo  h1{
+    /* font color and family */
+    color:hotpink;
+    font-family: 'Pacifico', cursive;
+    /* font size */
+    font-size: 30px;
+    font-weight: 800;
+    /* add some padding to font so it looks natural */
+    padding-left: 15px;
+    line-height: 4;
+}
+nav{
+    float:right;
+    width:900px;
+    height:100px;
+    padding-top: 40px;
+}
+/* nav > ul > ... 할 필요없이  */
+/* nav 바로 아래 ul에 id를 지정해서 쓰면 간단하다 */
+#topMenu{
+    height:60px;
+}
+/* 왼쪽으로 플로팅해서 메인메뉴 옆으로 나란히 만들기 */
+#topMenu > li{
+    float:left;
+    position:relative;
+}
+/* 메인메뉴의 텍스트들을 block요소로 만들어서 칸 띄우기 */
+#topMenu > li > a{
+    display: inline-block;
+    color:#fff;
+    font-weight: 600;
+    text-shadow: 0px 1px #07c;
+    padding:20px 60px; 
+}
+#topMenu > li > a > span{
+    font-size: 0.5em;
+}
+/* 메인메뉴에 마우스 올릴시 */
+#topMenu > li > a:hover{
+    color:black;
+    /* 글자 굵어지는거 방지용 색상만 바뀌게 숫자 반대로 */
+    text-shadow: 0px -1px;
+}
+
+/* 서브메뉴 */
+#topMenu > li > ul{
+    display:none;
+    /* 서브메뉴 칸의 위치를 부모요소에 맞춰서한다 */
+    position:absolute;
+    /* 배경 투명도 설정 */
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    left:20px;
+    margin:0;
+
+}
+/* 서브메뉴 칸 */
+#topMenu > li > ul > li{
+    /* padding:10px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left:40px;
+
+}
+/* 서브메뉴 a */
+#topMenu > li > ul > li > a{
+    font-size: 16px;
+    font-weight: 600;
+    color:black;
+}
+/* 메인메뉴에 마우스 */
+#topMenu > li:hover > ul{
+    display: block;
+    z-index: 10;
+}
+/* 서브메뉴에 마우스 */
+#topMenu > li > ul > li > a:hover{
+    color:red;
+}
+
+#imgSlide{
+    clear:both;
+    width: 100%;
+    height: 300px;
+    position:relative;
+    /* 이미지 넘치는 부분 제거 */
+    overflow: hidden;
+
+}
+#slides{
+    position:absolute;
+}
+#slides > img{
+    width: 100%;
+    float:left;
+}
+
+/*
+button{
+   버튼은 초기에 안보인다
+   display:none;
+   position:absolute;
+   border:none;
+   padding:20px;
+   background-color: transparent;
+   color:white;
+   font-weight: 800;
+   font-size: 20px;
+   opacity: 0.5;
+}
+prev next 버튼
+#prev{
+    left:0;
+}
+#next{
+    right:0;
+}
+button:hover{
+    background-color: #222;
+    color:white;
+    opacity: 0.6;
+    cursor:pointer;
+}
+button:focus{
+    outline:0;
+}
+*/
+
+#mainContent{
+    width:100%;
+    height:300px;
+    margin-top: 20px;
+    
+}
+#tabMenu{
+    width:600px;
+    height:100%;
+    float:left;
+    margin-top:10px;
+}
+#tabMenu input[type="radio"]{
+    display:none;
+}
+#tabMenu label{
+    display: inline-block;
+    margin:0 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid transparent;
+}
+#tabMenu label:hover{
+    color:#222;
+    cursor:pointer;
+}
+#tabMenu input:checked+label{
+    color:#b00;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+/* tabContent class */
+.tabContent{
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+
+}
+.tabContent h2{
+    display: none;
+}
+
+#notice ul{
+    list-style: disc;
+    margin-left: 30px;
+}
+#notice ul li{
+    font-size: 16px;
+    line-height: 2.5;
+}
+#gallery ul li{
+    display: inline;
+}
+/* tab1이 선택되었을 때 notice를 보여준다 */
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery{
+    display: block;
+}
+#links{
+    float:right;
+    width: 600px;
+    height:100%;
+    margin-top: 15px;
+}
+/* 링크 가로배치 */
+#links ul{
+    padding: 0;
+    overflow: hidden;
+}
+/* li 한개당 ul(600px)공간의 33%를 할당함 */
+#links ul li{
+    float:left;
+    width: 33%;
+    text-align: center;
+    margin: 10px 0;
+    padding:10px;
+}
+/* 이미지 */
+#links ul li span{
+    display: block;
+    margin:0 auto;
+    /* width height로 공간 만들고 */
+    /* border로 1px 실선 경계 만든다음 */
+    /* border-radius로 둥글게함 */
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    /* 100%로 해도 된다 */
+    border-radius: 50%;
+    line-height: 150px;
+}
+#quick-icon1{
+    background-image: url("../images/icon-1.jpg");
+}
+#quick-icon2{
+    background-image: url("../images/icon-2.jpg");
+}
+#quick-icon3{
+    background-image: url("../images/icon-3.jpg");
+}
+#links ul li a p{
+    /* 이미지와 텍스트 사이 공간 */
+    margin-top: 15px;
+    /* 폰트 굵기, 색 */
+    font-weight: 600;
+    color: #666;
+}
+#footer{
+    clear:both;
+    width: 100%;
+    height:100px;
+    /* 푸터 구분선 */
+    border-top: 2px solid #222;
+}
+#bottomMenu{
+    width: 100%;
+    height: 20px;
+    /* sns가 absolute임 */
+    position:relative;
+}
+/* ~sitemap */
+#bottomMenu ul{
+    margin-top: 15px;
+}
+/* 메뉴 가로정렬 */
+#bottomMenu ul li{
+    float:left;
+    padding: 5px 20px;
+    /* 각 메뉴마다 경계선 설정 */
+    border-right: 1px solid #ddd;
+}
+/* 가장 오른쪽 메뉴 오른쪽엔 경계선 없음 */
+#bottomMenu ul li:last-child{
+    border-right:none;
+}
+#bottomMenu ul li a,#bottomMenu ul li a:visited{
+    font-size: 15px;
+    color:#666;
+}
+/* sns버튼을 맨 오른쪽으로 밀착 */
+#sns{
+    position:absolute;
+    right:0;
+}
+#sns ul li{
+    /* 버튼 사이 경계없앰 */
+    border:none;
+    padding:5px;
+}
+/* 연락처 */
+#company{
+    clear:both;
+    /* margin으로 글자 위치 맞춤 */
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#company p{
+    font-size:14px;
+    /* 색 연하게 */
+    color:#aaa;
+}
