@@ -1,0 +1,39 @@
+body{
+    margin-top:0;
+    margin-left:50px;
+}
+.parent{
+    position:relative;
+    width: 100%;
+    height:500px;
+    background-color: cornflowerblue;
+}
+.parent h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+.children{
+    margin-left:10px;
+    font-size:30px;
+    font-weight: 800;
+}
+.child1{
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    left:0;
+
+}
+.child2{
+    position:absolute;
+    width:100px;
+    height:100px;
+    background-color: chartreuse;
+    left:100px;
+}
+.child3{
+    width:auto;
+    height:100px;
+    background-color: fuchsia;
+}

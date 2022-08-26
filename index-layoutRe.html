@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/siteStyleRe.css">
+</head>
+<body>
+    <!-- 문서 전체 -->
+    <div id="container">
+        <!-- 로고, 내비게이션 -->
+        <header>
+            <div id="logo">
+                <!-- logo 클릭시 이 문서로 이동됨 -->
+                <a href="index-layoutRe.html">
+                    <h1>Sunsang yas party</h1>
+                </a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <!-- first menu + 2 sub menus -->
+                    <li>
+                        <a href="#">
+                            1main <span>★</span>
+                        </a>
+                        <ul>
+                            <li><a href="#">1sub</a></li>                     
+                            <li><a href="#">2sub</a></li> 
+                        </ul>
+                    </li>
+                    <!-- second menu + 2 sub menus -->
+                    <li>
+                        <a href="#">2main <span>★</span></a>
+                        <ul>
+                            <li>
+                                <a href="#">1sub</a>
+                            </li>
+                            <li>
+                                <a href="#">1sub</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">3main</a></li>
+                    <li><a href="#">4main</a></li>
+                </ul>
+    
+            </nav>  
+        </header>
+        <!-- image slide -->
+        <div id="imgSlide">
+            <div id="slides">
+                <!-- 이미지 삽입 -->
+                <img src="/images/photo-1.jpg" alt="">
+                <img src="/images/photo-2.jpg" alt="">
+                <img src="/images/photo-3.jpg" alt="">
+            </div>
+        </div>
+        <!-- 메인컨텐츠(퀵링크, 탭메뉴) -->
+        <div id="mainContent">         
+            <div id="tabMenu">
+                <!-- 공지사항은 기본으로 선택되게 -->
+                <input type="radio" id="tab1" name="tabs" checked>
+                <label for="tab1">공지사항</label>
+                <input type="radio" id="tab2" name="tabs">
+                <label for="tab2">갤러리</label>
+
+                <div id="notice" class="tabContent">
+                    <h2>예아</h2>
+                    <ul>
+                        <li>예아2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>ㅅ6</li>
+                        
+                    </ul>
+                </div>
+                <div id="gallery" class="tabContent">
+                    <h2>aaaaaa</h2>
+                    <ul>
+                        <li><img src="/images/img-1.jpg" alt=""> </li>
+                        <li><img src="/images/img-2.jpg" alt=""> </li>
+                        <li><img src="/images/img-3.jpg" alt=""> </li>
+                        <li><img src="/images/img-1.jpg" alt=""> </li>
+                        <li><img src="/images/img-2.jpg" alt=""> </li>
+                        <li><img src="/images/img-3.jpg" alt=""> </li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div id="links">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon1"></span>
+                            <p>peace yas</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon2"></span>
+                            <p>healing yas</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon3"></span>
+                            <p>question</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer">
+            <!-- 푸터 메뉴 -->
+            <div id="bottomMenu">
+                <ul>
+                    <li><a href="#">intro</a></li>
+                    <li><a href="#">rights</a></li>
+                    <li><a href="#">laws</a></li>
+                    <li><a href="#">sitemap</a></li>
+                </ul>
+            
+            <!-- sns링크 -->
+                <div id="sns">
+                    <ul>
+                        <li><a href="#"><img src="images/sns-1.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/sns-2.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/sns-3.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="company">
+                <p>address (contact)031-660-6055</p>
+            </div>
+        </div>
+    </div>
+    <!-- link js file -->
+    <script src="js/slideshow.js"></script>
+</body>
+</html>

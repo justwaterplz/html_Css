@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/siteStyle.css">
+</head>
+<body>
+    <!-- layout 필요한것 -->
+    <!-- container(전체), 로고자리, 내비게이션, 이미지, 탭 메뉴, 퀵링크, 푸터 -->
+    <div id="container">
+        <header>
+            <!-- 로고 -->
+            <div id="logo">
+                <a href="index-layout.html"></a>
+                <h1>logo goes here</h1>
+            </div>
+            <!-- 내비게이션 -->
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="#">단체여행 <span>▼</span></a>
+                        <ul>
+                            <li><a href="#">회사 연수</a> </li>
+                            <li><a href="#">수학 여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">맞춤 여행 <span>▼</span></a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">갤</a></li>
+                    <li><a href="#">문의</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="imgSlide">
+            <!-- 슬라이드쇼의 이미지를 담는 공간 slide를 따로 만든다 -->
+            <div id="slides">
+                <img src="/images/photo-1.jpg" alt="">
+                <img src="/images/photo-2.jpg" alt="">
+                <img src="/images/photo-3.jpg" alt="">
+                <!-- 자동으로 이미지 슬라이딩을 위해 버튼코드 삭제 -->
+                <!-- <button id="prev">&lang;</button> -->
+                <!-- <button id="next">&rang;</button>     -->
+            </div>
+        </div>
+        <div id="content">
+            <div id="tabMenu">
+                <input type="radio" id="tab1" name="tabs" checked>
+                <label for="tab1">공지사항</label>
+                <input type="radio" id="tab2" name="tabs">
+                <label for="tab2">갤</label>
+
+                <div id="notice" class="tabContent">
+                    <h2>공지사항내용</h2>
+                    <ul>
+                        <li>사무실이전</li>
+                        <li>선상야스파티예정</li>
+                        <li>123</li>
+                        <li>456</li>
+                        <li>물론헬스</li>
+                    </ul>
+                </div>
+                <div id="gallery" class="tabContent">
+                    <h2>국내선상야스파티갤러리</h2>
+                    <ul>
+                        <li><img src="/images/img-1.jpg" alt=""></li>
+                        <li><img src="/images/img-2.jpg" alt=""></li>
+                        <li><img src="/images/img-1.jpg" alt=""></li>
+                        <li><img src="/images/img-2.jpg" alt=""></li>
+                        <li><img src="/images/img-1.jpg" alt=""></li>
+                        <li><img src="/images/img-2.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="link">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon1"></span>
+                            <p>peace</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon2"></span>
+                            <p>healing</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon3"></span>
+                            <p>question</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+
+    <script src="/js/slideshow.js"></script>
+</body>
+</html>
