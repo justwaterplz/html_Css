@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 종합본</title>
+</head>
+<body>
+    <script>
+        // 1. 배열 선언
+        const str = "hello";
+        
+        //요소 출력
+        console.log("배열 길이: " + str.length);
+        
+        for(character in str){
+            console.log(`str[${character}]: ${str[character]}`);
+        }
+        console.log("\n")
+        console.log("\n")
+        console.log("\n")
+
+        //짬통배열 선언
+        const array = [273,'string',true,function () {},{}, [273,103]];
+        //요소 출력
+        for(items in array){
+            console.log(`array[${items}] = ${array[items]}`);
+        } 
+
+        console.log("\n")
+        console.log("\n")
+
+
+        const numbers = [273,52,103,32];
+
+        // 배열 길이 확인용 numbers.length
+        //배열 인덱스 사용할 때 []안에 +1같이 연산식도 사용 가능하다.
+        console.log(`numbers[0] = ${numbers[0]}`);
+        for(let i = 0; i < numbers.length-1; i++){
+            console.log(`numbers[${i+1}] = ${numbers[i+1]}`);
+        }
+
+        console.log("\n")
+        console.log("\n")
+        
+        //배열 뒷부분에 요소 추가하기 push
+        const todos = ["eat","sleep","take shit","eat"];
+
+
+        
+    </script>
+</body>
+</html>
