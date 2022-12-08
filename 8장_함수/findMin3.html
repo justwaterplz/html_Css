@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반변수 + 나머지 매개변수</title>
+</head>
+<body>
+    <script>
+        //함수에서 매개변수의 자료형에 따라 다르게 동작함
+        function findMin3(first, ...rest){
+            let min;
+            let items;
+
+            //first부터 배열이면
+            if(Array.isArray(first)){
+                min = first[0];
+                items = first;
+            }   
+            else if(typeof(first) === 'number'){
+                min = first;
+                items = rest;
+            }
+
+            //나머지는 동일하게
+            for(const item of items){
+                if(min > item){
+                    min = item;
+                }
+            }
+
+            return min;
+        }
+
+        //숫자
+        console.log(`${findMin3(11, 6, 13, 4, 2)}`);
+
+        //배열
+        console.log(`${findMin3([5, 18, 8, 15, 3, 5, 7, 1, 20, 0])}`);
+
+
+
+    </script>
+</body>
+</html>

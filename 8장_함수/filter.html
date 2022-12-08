@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [0,1,2,3,4,5];
+
+        //반환 값이 true인 값들만 모아서 새로운 배열 생성
+        //콜백 함수 매개변수는 다 안써도 되고 필요한 것만 써도 된다. 밑줄 value만 쓴 것처럼
+        const evenNum = numbers.filter(function(value){
+            return value % 2 === 0;
+        })
+
+        console.log(`원본 배열: ${numbers}`)
+        console.log(`filter 이후: ${evenNum}`)
+
+    </script>
+</body>
+</html>

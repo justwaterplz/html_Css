@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findMin(array){
+            let min = array[0];
+
+            for(let i = 1; i < testArray.length; i++){
+                if(min > array[i]){
+                    min = array[i];
+                }
+            }
+
+            return min;
+        }
+
+        const testArray = [52,273,32,103,275,24,57,1];
+
+        console.log(findMin(testArray));
+        console.log(testArray.length);
+    </script>
+    
+
+</body>
+</html>

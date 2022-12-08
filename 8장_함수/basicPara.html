@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //기본 매개변수 적을 때는 오른쪽부터 채운다.
+        function earnings(name, wage=9160, hours=40){
+            console.log(`name = ${name}`);
+            console.log(`wage = ${wage}`);
+            console.log(`hours = ${hours}`);
+            console.log(`월급 = ${wage * hours}`);
+            console.log(``);
+        }
+
+        earnings('aa');
+        earnings("bb",10000);
+        earnings("cc",20000,80);
+    </script>
+</body>
+</html>

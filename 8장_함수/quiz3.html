@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz 2</title>
+</head>
+<body>
+    <script>
+        const max = function(first, ...array){
+            let result = first[0];
+            //반복문용 인덱스
+            let items;
+
+            //첫번째 요소를 max(result)에 주고 나머지를 반복문용 items에 준다.
+            result = first;
+            items = array;
+
+            for(const item of items){
+                if(result < item)
+                {
+                    result = item;
+                }
+            }
+
+            return result;
+        }
+    
+        console.log(max(1,2,7,3,4,6));
+    
+    </script>
+</body>
+</html>

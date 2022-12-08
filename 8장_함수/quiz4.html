@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz 4</title>
+</head>
+<body>
+    <script>
+        const max = function(first, ...array){
+            let result;
+            let items;
+
+            if(Array.isArray(first)){
+                result = first[0];
+                items = first;
+            }
+            else if(typeof(first) === 'number'){
+                result = first;
+                //first 제외하고 나머지 요소가 배열 형태로 저장되어 있는데 그게 rest
+                //rest를 반복문용 items에 넘김
+                items = array;
+            }
+
+            for(const item of items){
+                if(result < item)
+                {
+                    result = item;
+                }
+            }
+
+            return result;
+        }
+    
+        console.log(`${max([1,2,37,,4])}`);
+        console.log(`${max(1,2,3332,4)}`);
+    </script>
+</body>
+</html>

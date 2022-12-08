@@ -46,8 +46,28 @@
         
         //배열 뒷부분에 요소 추가하기 push
         const todos = ["eat","sleep","take shit","eat"];
+        console.log(todos);
+        console.log(`length: ${todos.length}`);
 
+        //추가
+        todos.push("1");
+        todos.push("2");
 
+        for(todoprint in todos){
+            console.log(`todos[${todoprint}]: ${todos[todoprint]}`);
+        }
+        console.log(`length: ${todos.length}`);
+
+        //배열 요소 삭제는 splice
+        //시작 인덱스, 삭제할 요소 개수
+        todos.splice(4,2);
+        //위에서 추가한 2개 삭제
+        console.log(todos);
+
+        //splice로 요소 추가
+        //(인덱스,0,요소)
+        todos.splice(1,0,"take a walk");
+        console.log(todos);
         
     </script>
 </body>
