@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //상속
+        class Rectangle{
+            constructor(width,height){
+                this.width = width;
+                this.height = height;
+            }
+
+            getPerimeter(){
+                return (2 * (this.width + this.height));
+            }
+            getArea(){
+                return this.width*this.height;
+            }
+            toString(){
+                return `perimeter: ${this.getPerimeter()}, area: ${this.getArea()}`;
+            }
+        }
+
+        //정사각형 직사각형으로부터 상속받음
+        class Square extends Rectangle{
+            constructor(side){
+                super(side,side);
+            }
+
+        }
+        
+
+        // const rect = new Rectangle(10,20);
+        const sqr = new Square(3);
+        console.log(`${sqr.toString()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

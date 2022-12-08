@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            let counter = 0;
+            const h1 = document.querySelector('h1')
+
+            //body에 있는 h1태그 텍스트 클릭 시 이벤트 발생, counter 1씩 증가함.
+            h1.addEventListener('click',(event) => {
+                counter++;
+                h1.textContent = `클릭횟수: ${counter}`
+            })
+        })
+    </script>
+    <style>
+        h1{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>클릭 횟수:0</h1>
+</body>
+</html>

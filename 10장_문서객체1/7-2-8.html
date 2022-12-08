@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            let currentVal;
+            let transConst = 10;
+
+            const select = document.querySelector('select');
+            const input = document.querySelector('input');
+            //변환 결과는 span으로 할 것
+            const span = document.querySelector('span');
+
+            const calc = () => {
+                span.textContent = (currentVal * transConst).toFixed(2);
+            }
+
+            select.addEventListener('change',(event) => {
+                const options = event.currentTarget.options;
+                //현재 select에서 선택된 option의 인덱스(옵션 번호)가 현재 인덱스가 됨
+                const index = event.currentTarget.options.selectedIndex;
+                //index = 0 ~ 2의 value => 환산 단위
+                transConst = Number(options[index].value);
+                calc();
+            })
+
+            //input에 값 입력됨.
+            input.addEventListener('keyup',(event) => {
+                //currentVal에 event.currentTarget.value(input)에 있는 값을 숫자로 변환한 값이 들어감
+                currentVal = Number(event.currentTarget.value);
+                calc();
+            })
+
+    
+        })
+    </script>
+</head>
+<body>
+    <input type="text">cm =
+    <span></span>
+    <select name="" id="">
+        <option value="10">mm</option>
+        <option value="0.01">m</option>
+        <option value="0.393701">inch</option>
+    </select>
+</body>
+</html>
